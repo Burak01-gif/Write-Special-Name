@@ -328,20 +328,18 @@ import java.util.Scanner;
 
 
         public static void H(int sayı) {
-            for (int i = 0; i < 6; i++) {
-                for (int j = 0; j < 4; j++) {
-
-                    if (i == 2 && j < 4) {
-                        System.out.print(" ");
-                    } else if ((j == 0 || j == 3) && i < 6) {
-                        System.out.print("*");
-                    } else {
-                        System.out.print(" ");
-                    }
+        int half = sayı / 2;
+        for (int i = 0; i <= sayı; i++) {
+            for (int j = 0; j <= sayı; j++) {
+                if (j == 0 || j == sayı - 1 || (i == half && j != 0 && j != sayı)) {
+                    System.out.print(" * ");
+                } else {
+                    System.out.print("   ");
                 }
-                System.out.println();
             }
+            System.out.println();
         }
+        }  
 
         public static void I(int sayı) {
             for (int i = 0; i < sayı; i++) {
